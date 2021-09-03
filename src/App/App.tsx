@@ -1,14 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-import logo from "../assets/logo.png";
-
-import styles from "./App.module.scss";
+import {Candidate} from "../types/candidate";
+import ColumnsContainer from "../components/ColumnsContainer";
+import api from "../api";
 
 function App() {
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
+
+  useEffect(() => {
+    (async function () {
+      const candidateApi = await api.candidates.list();
+
+      setCandidates(candidateApi);
+    })();
+  });
+
   return (
     <main>
-      <img alt="Softvision" src={logo} width={320} />
-      <h1 className={styles.title}>Lets get this party started</h1>
+      <ColumnsContainer {...candidates} />
     </main>
   );
 }

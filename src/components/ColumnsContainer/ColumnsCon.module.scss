@@ -1,0 +1,12 @@
+.container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 5px;
+    padding: 5px;
+}
+
+.buttonAgregar{
+    width: 90%;
+    margin: 10px 5px;
+}
