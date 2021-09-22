@@ -1,5 +1,3 @@
 ### Job Searching Steps
 
-# Todo
-- responsive
-- re deploy
+just a page to help me to organize my job hunting
