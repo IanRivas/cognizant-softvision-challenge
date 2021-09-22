@@ -9,15 +9,25 @@ function App() {
 
   useEffect(() => {
     (async function () {
-      const candidateApi = await api.candidates.list();
+      const candidateApi: Array<Candidate> = await api.candidates.list();
+      let item: string | null = "";
+      let itemN = [];
 
-      setCandidates(candidateApi);
+      item = localStorage.getItem("postulaciones");
+      if (item !== null) {
+        itemN = JSON.parse(item);
+      }
+      if (itemN.length !== 0) {
+        setCandidates(itemN);
+      } else {
+        setCandidates(candidateApi);
+      }
     })();
-  });
+  }, []);
 
   return (
     <main>
-      <ColumnsContainer {...candidates} />
+      <ColumnsContainer cand={candidates} />
     </main>
   );
 }

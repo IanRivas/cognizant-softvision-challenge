@@ -1,12 +1,15 @@
 [{
-  "id": "goncy",
-  "name": "Gonzalo Pozzo",
-  "step": "Entrevista técnica",
-  "comments": "Medio pelo"
-}, 
+  "id": "1",
+  "name": "Mercado Libre",
+  "step": "Envié CV",
+  "contacto": "Lady Khamala",
+  "comments": "Nice Try"
+},
 {
-  "id": "doe",
-  "name": "John Doe",
-  "step": "Entrevista inicial",
-  "comments": ""
-}]
+  "id": "2",
+  "name": "Cognizant Softvision",
+  "step": "Entrevista Inicial",
+  "contacto": "Put a contact here",
+  "comments": "Good Luck"
+}
+]
